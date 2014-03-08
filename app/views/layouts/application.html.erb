@@ -24,7 +24,7 @@
 						<% score_count += 1 %>
 						<span class="review">
 							<span class="message">
-								<a href="/scores/<%= score.id %>">Today's Match-<%= score_count %> - <%= score.name %> (<%= score.team1 %> vs  <%= score.team2 %>)
+								<a href="/scores/<%= score.id %>">Today's Match-<%= score_count %> - <%= score.name %> (<%= Team.find(score.team1).name %> vs  <%= Team.find(score.team2).name %>)
 								</a>
 							</span> -
 							<span class="forename"><%= score.venue %></span> 
@@ -36,7 +36,7 @@
 						<% score_count += 1 %>
 						<span class="review">
 							<span class="message">
-								<a href="/scores/<%= score.id %>">Match-<%= score_count %> - <%= score.name %> (<%= score.team1 %> vs  <%= score.team2 %>)
+								<a href="/scores/<%= score.id %>">Match-<%= score_count %> - <%= score.name %> (<%= Team.find(score.team1).name %> vs  <%= Team.find(score.team2).name %>)
 								</a>
 							</span> -
 						<span class="forename"><%= score.venue %></span> 
