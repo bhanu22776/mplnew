@@ -7,19 +7,25 @@
         <th>Balls</th>
         <th>Fours</th>
         <th>Sixes</th>
-        <!-- <th>Status</th> -->
+        <th>Status</th>
         <th>Bowler</th>
       </tr>
     </thead>
     <tbody>
-      <% @battings2.each do |bat| %>
+      <% @battings2.reverse.each do |bat| %>
         <tr>
           <td><%= bat.name %></td>
           <td><%= bat.runs %></td>
           <td><%= bat.balls %></td>
           <td><%= bat.fours %></td>
           <td><%= bat.sixes %></td>
-          <!-- <td><%= bat.status %></td> -->
+          <td>
+            <% if bat.status == true %>
+              Out
+            <% else %>
+              Bat
+            <% end %>
+          </td>
           <td><%= bat.bowler %></td>
         </tr>
       <% end %>
@@ -32,18 +38,19 @@
     <thead>
       <tr>
         <th>Bowler</th>
+        <th>Runs</th>
         <th>Overs</th>
         <th>Wides</th>
         <th>Noballs</th>
-
         <th>Maidens</th>
         <th>Wickets</th>
       </tr>
     </thead>
     <tbody>
-      <% @bowlings2.each do |bowl| %>
+      <% @bowlings2.reverse.each do |bowl| %>
         <tr>
           <td><%= bowl.name %></td>
+          <td><%= bowl.runs %></td>
           <td><%= bowl.overs %></td>
           <td><%= bowl.wides %></td>
           <td><%= bowl.noball %></td>

@@ -59,8 +59,62 @@
       </div>
        <div class="list-group">
         <b href="#" class="list-group-item active">Score</b>
-        <b href="#" class="list-group-item"><%= Team.find(@score.team1).name %>:<%= @score.scoreteam1 %></b>
-        <b href ="#" class="list-group-item"><%= Team.find(@score.team2).name %>:<%= @score.scoreteam2 %></b>
+        <b href="#" class="list-group-item"><%= Team.find(@score.team1).name %>:<%= @score.team1score %></b>
+        <b href ="#" class="list-group-item"><%= Team.find(@score.team2).name %>:<%= @score.team2score %></b>
+      </div>
+
+      <div id="carousel-example-generic" class="carousel slide list-group" data-ride="carousel">
+       
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        </ol>
+       
+        <!-- Slider Content (Wrapper for slides )-->
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag @score.photo1.url, :style => "height:150px;width:320px;" %> 
+            <div class="carousel-caption">
+              <%= @score.guest1 %>
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag @score.photo2.url, :style => "height:150px;width:320px;" %> 
+            <div class="carousel-caption">
+              <%= @score.guest2 %>
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag @score.photo3.url, :style => "height:150px;width:320px;" %> 
+            <div class="carousel-caption">
+              <%= @score.guest3 %>
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag @score.photo4.url, :style => "height:150px;width:320px;" %> 
+            <div class="carousel-caption">
+              <%= @score.guest4 %>
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag @score.photo5.url, :style => "height:150px;width:320px;" %> 
+            <div class="carousel-caption">
+              <%= @score.guest5 %>
+            </div>
+          </div>
+        </div>
+       
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+          <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-back-16.png" align="middle">
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+          <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-16.png">
+        </a>
       </div>
     </div><!--/span-->
   </div>
@@ -70,7 +124,7 @@
 ul{
   list-style-type: none;
 }
-li{
+#profile{
   padding: 1em;
 }
 </style>

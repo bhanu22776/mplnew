@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: mplnew_development
+  database: mplgit_development
   pool: 5
   username: bhanu
   password: postgres
@@ -41,7 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: mplnew_test
+  database: mplgit_test
   pool: 5
   username: bhanu
   password: postgres
@@ -49,7 +49,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: mplnew_production
+  database: mplgit_production
   pool: 5
   username: bhanu
   password: postgres
